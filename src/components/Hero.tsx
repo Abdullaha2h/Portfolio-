@@ -39,7 +39,7 @@ export const Hero = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="w-full max-w-[320px] md:max-w-[400px]"
+                    className="w-full max-w-[300px] md:max-w-[400px]"
                 >
                     <AvatarRoot />
                 </motion.div>
