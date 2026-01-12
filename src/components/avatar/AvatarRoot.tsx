@@ -2,9 +2,9 @@
 
 import React, { useRef, useState, createContext, useContext, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Torso } from "./Torso";
-import { Neck } from "./Neck";
-import { Head } from "./Head";
+import { Torso } from "./Torso.tsx";
+import { Neck } from "./Neck.tsx";
+import { Head } from "./Head.tsx";
 
 
 // Create a context to share mouse position with child components (like Eyes)
