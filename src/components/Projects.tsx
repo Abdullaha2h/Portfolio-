@@ -9,12 +9,6 @@ const PROJECTS = [
         id: "pixelpanda",
         title: "Pixel Panda Store",
         description: "Pixel Panda is a premium digital assets marketplace designed with a high-end, glassy aesthetic and fluid mascot animations. Built with Next.js 15, it offers a seamless experience for creators and collectors to explore iconic digital items.",
-        features: [
-            "Organic Mascot Animations: Custom triple-layered CSS animations.",
-            "Glassy Design System: Backdrop blurs, vibrant gradients, and premium typography.",
-            "Interactive Cart Sidebar: Seamless real-time side drawer.",
-            "Admin Dashboard: Comprehensive management interface for asset control."
-        ],
         image: "/PixelPanda.png",
         liveLink: "https://pixelpandapro.vercel.app/",
         tech: ["Next.js 15", "Tailwind CSS", "Framer Motion", "Shadcn UI"]
@@ -123,15 +117,6 @@ export const Projects = () => {
                                 {project.description}
                             </p>
 
-                            {project.features && (
-                                <ul className="space-y-2 text-left inline-block lg:block">
-                                    {project.features.map((feature, i) => (
-                                        <li key={i} className="text-slate-500 text-sm flex gap-2">
-                                            <span className="text-slate-100">▹</span> {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
 
                             <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                                 {project.tech.map((t) => (
