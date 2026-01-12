@@ -20,7 +20,7 @@ export default function Home() {
             </div>
 
             <main className="flex-1 flex flex-col items-center">
-                <section id="home" className=" flex items-center justify-center">
+                <section id="home" className=" md:min-h-screen flex items-center justify-center">
                     <Hero />
                 </section>
                 <About />

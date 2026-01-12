@@ -5,7 +5,7 @@ import { CursorGlow } from "@/components/cursor-glow";
 
 export const Background = () => {
     return (
-        <div className="fixed inset-0 pointer-events-none">
+        <div className="fixed md:block hidden inset-0 pointer-events-none">
             <CursorGlow />
             <div className="absolute inset-0 overflow-hidden z-0">
                 <motion.div
