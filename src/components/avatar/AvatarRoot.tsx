@@ -90,7 +90,7 @@ export default function AvatarRoot({ className = "max-w-[400px]" }: { className?
                             y="0px"
                             viewBox="-20 -20 165 220"
                             xmlSpace="preserve"
-                            className="w-[130%] h-[130%] overflow-visible relative translate-y-[15%]"
+                            className="md:w-[130%] md:h-[130%]  w-[140%]  h-[140%]  overflow-visible relative  translate-y-[20%] md:translate-y-[15%]"
                         >
                             <g>
                                 <Torso />
