@@ -2,8 +2,12 @@
 
 import { Background } from "@/components/Background";
 import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Projects } from "@/components/Projects";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Navbar } from "@/components/navbar";
+
+import { Contact } from "@/components/Contact";
 
 export default function Home() {
     return (
@@ -11,12 +15,17 @@ export default function Home() {
             <Background />
 
             {/* Mobile Navbar - Only visible on small screens */}
-            <div className="lg:hidden fixed top-6 right-6 z-50">
+            <div className="lg:hidden pt-10 flex  top-10 justify-end z-50">
                 <Navbar />
             </div>
 
-            <main className="flex-1 flex flex-col justify-center items-center py-12 lg:py-0">
-                <Hero />
+            <main className="flex-1 flex flex-col items-center">
+                <section id="home" className="min-h-screen flex items-center justify-center">
+                    <Hero />
+                </section>
+                <About />
+                <Projects />
+                <Contact />
             </main>
 
             <SocialLinks />

@@ -26,11 +26,17 @@ export function Navbar() {
 
     return (
         <nav className="flex flex-col lg:flex-col lg:gap-6 relative z-10">
-            <div className="flex flex-col lg:gap-4 gap-2 lg:gap-6 items-end lg:items-start">
+            <div className="flex flex-col  gap-2 lg:gap-6 items-end lg:items-start">
                 {NAV_ITEMS.map((item) => (
                     <button
                         key={item.id}
-                        onClick={() => setActiveTab(item.id)}
+                        onClick={() => {
+                            setActiveTab(item.id);
+                            const element = document.getElementById(item.id);
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
                         className="group flex flex-row lg:flex-row items-center gap-2 lg:gap-4 text-left outline-none cursor-pointer"
                     >
                         <div className="relative flex h-px items-center">
@@ -61,7 +67,7 @@ export function Navbar() {
                         </div>
                         <span
                             className={cn(
-                                "text-[10px] lg:text-xs font-bold tracking-[0.1em] lg:tracking-[0.2em] transition-colors duration-300",
+                                "text-[10px] lg:text-xs font-bold tracking-widest lg:tracking-[0.2em] transition-colors duration-300",
                                 activeTab === item.id
                                     ? "text-slate-100"
                                     : "text-slate-500 group-hover:text-slate-100"
