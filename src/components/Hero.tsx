@@ -17,7 +17,7 @@ export const Hero = () => {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-100 mb-4">
                         Muhammad Abdullah
                     </h1>
-                    <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-slate-200 mb-6 font-mono tracking-wide">
+                    <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-slate-200 md:mb-6 mb-2 font-mono tracking-wide">
                         Full Stack Engineer
                     </h2>
                     <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4 lg:px-0">
