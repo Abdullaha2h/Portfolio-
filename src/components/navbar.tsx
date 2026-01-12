@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -13,6 +13,16 @@ const NAV_ITEMS = [
 
 export function Navbar() {
     const [activeTab, setActiveTab] = useState("home");
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 1024);
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     return (
         <nav className="flex flex-col lg:flex-col lg:gap-6 relative z-10">
@@ -28,14 +38,14 @@ export function Navbar() {
                             <motion.div
                                 initial={false}
                                 animate={{
-                                    width: activeTab === item.id ? (window?.innerWidth < 1024 ? 20 : 80) : (window?.innerWidth < 1024 ? 8 : 32),
+                                    width: activeTab === item.id ? (isMobile ? 20 : 80) : (isMobile ? 8 : 32),
                                     backgroundColor: activeTab === item.id ? "#f8fafc" : "#64748b",
                                     boxShadow: activeTab === item.id
                                         ? "0 0 8px 2px rgba(248, 250, 252, 0.3)"
                                         : "0 0 0px 0px rgba(0,0,0,0)",
                                 }}
                                 whileHover={{
-                                    width: window?.innerWidth < 1024 ? 20 : 80,
+                                    width: isMobile ? 20 : 80,
                                     backgroundColor: "#f8fafc",
                                     boxShadow: "0 0 8px 2px rgba(248, 250, 252, 0.3)",
                                 }}
