@@ -6,7 +6,7 @@ import AvatarRoot from "@/components/avatar/AvatarRoot";
 
 export const Hero = () => {
     return (
-        <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full max-w-7xl mx-auto py-12 lg:py-0">
+        <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full max-w-7xl mx-auto py-0 lg:py-0">
             {/* Left Side: Hero Text */}
             <div className="flex-1 max-w-2xl text-center lg:text-left">
                 <motion.div
